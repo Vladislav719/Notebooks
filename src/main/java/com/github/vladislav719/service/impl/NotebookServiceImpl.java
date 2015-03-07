@@ -58,7 +58,7 @@ public class NotebookServiceImpl implements NotebookService {
 
     @Override
     public void deleteNotebooksByConditionAnd() {
-
+        notebookRepository.deleteNotebooks("","","");
     }
 
     @Override

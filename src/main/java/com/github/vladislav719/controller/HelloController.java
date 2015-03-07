@@ -16,10 +16,8 @@ public class HelloController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
-		System.out.println("START_____________________");
-		for (Notebook notebook : service.getAll())
-			System.out.println(notebook.getCpu());
+
+		model.addAttribute("notebooks", service.getAll());
 		return "hello";
 	}
 }

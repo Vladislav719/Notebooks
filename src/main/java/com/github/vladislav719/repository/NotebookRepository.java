@@ -32,4 +32,7 @@ public interface NotebookRepository extends CrudRepository<Notebook, Long> {
     public List<Notebook> getAllIntel();
 
 
+    @Query("delete from Notebook n where n.monitor=?1 and n.ram=?2 and n.gpu=?3")
+    public void deleteNotebooks(String s1, String s2, String s3);
+
 }
